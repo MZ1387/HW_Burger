@@ -29,23 +29,17 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>1 </td>
-                                    <td>Bacon Burger</td>
+                                {{#each burgers}}
+                                  {{#unless this.devoured}}
+                                  <tr>
+                                    <td>{{this.id}}</td>
+                                    <td>{{this.burger_name}}</td>
                                     <td class="text-right">
                                         <button class="btn btn-success btn-xs" type="submit">Eat Burger</button>
                                     </td>
-                                    <!-- <li>
-                                          {{this.name}}
-
-                                          <form action="/{{this.id}}?_method=PUT" method="POST">
-                                            <input type="hidden" name="sleepy" value="true">
-                                            <button type="submit">SLEEP TIME!</button>
-                                          </form>
-
-                                          {{> cats/delete-cat}}
-                                        </li> -->
-                                </tr>
+                                  </tr>
+                                  {{/unless}}
+                                {{/each}}
                             </tbody>
                         </table>
                     </div>
@@ -65,20 +59,14 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>1 </td>
-                                    <td>Bacon Burger</td>
-                                </tr>
-                                <!-- <li>
-                                      {{this.name}}
-
-                                      <form action="/{{this.id}}?_method=PUT" method="POST">
-                                        <input type="hidden" name="sleepy" value="true">
-                                        <button type="submit">SLEEP TIME!</button>
-                                      </form>
-
-                                      {{> cats/delete-cat}}
-                                    </li> -->
+                                {{#each burgers}}
+                                  {{#if this.devoured}}
+                                  <tr>
+                                    <td>{{this.id}}</td>
+                                    <td>{{this.burger_name}}</td>
+                                  </tr>
+                                  {{/if}}
+                                {{/each}}
                             </tbody>
                         </table>
                     </div>
