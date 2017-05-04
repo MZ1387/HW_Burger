@@ -6,7 +6,7 @@ var exphbs = require('express-handlebars');
 // Import routes and give the server access to them.
 var routes = require("./controllers/burgers_controller.js");
 
-var port = 3000;
+var port = process.env.PORT || 3000;
 
 // create server
 var app = express();
