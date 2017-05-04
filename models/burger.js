@@ -8,34 +8,26 @@ var burger = {
       orm.selectAll("burgers", function(res) {
         callBack(res);
       });
-    }
-    ,
+    },
 
     insertOne: function(value, callBack) {
       orm.insertOne("burgers", value, function(res) {
         callBack(res);
       });
+    },
+
+    updateOne: function(column, condition, callBack) {
+      orm.updateOne("burgers", column, condition, function(res) {
+        callBack(res);
+      });
     }
 
-//     create: function(cols, vals, cb) {
-//   orm.create("cats", cols, vals, function(res) {
+//     update: function(devoured, condition, cb) {
+//   orm.update("cats", objColVals, condition, function(res) {
 //     cb(res);
 //   });
 // },
-    // ,
-    //
-    // updateOne: function() {
-    //   orm.updateOne();
-    // }
 };
-
-// var burger = {
-//   selectAll: function(cb) {
-//     orm.selectAll("burgers", function(res) {
-//       cb(res);
-//     });
-//   }
-// };
 
 // Export the database functions for the controller (catsController.js).
 module.exports = burger;
