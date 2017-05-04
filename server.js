@@ -3,7 +3,6 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 var exphbs = require('express-handlebars');
-// var mysql = require('mysql');
 // Import routes and give the server access to them.
 var routes = require("./controllers/burgers_controller.js");
 

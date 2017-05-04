@@ -3,31 +3,25 @@
 var orm = require("../config/orm.js");
 
 var burger = {
-    // call mySQL SELECTS ALL FROM BURGERS and returns array of objects in callback
+    // select all values from mysql database
     selectAll: function(callBack) {
       orm.selectAll("burgers", function(res) {
         callBack(res);
       });
     },
-
+    // insert new value on user input
     insertOne: function(value, callBack) {
       orm.insertOne("burgers", value, function(res) {
         callBack(res);
       });
     },
-
+    // update value on user input
     updateOne: function(column, condition, callBack) {
       orm.updateOne("burgers", column, condition, function(res) {
         callBack(res);
       });
     }
-
-//     update: function(devoured, condition, cb) {
-//   orm.update("cats", objColVals, condition, function(res) {
-//     cb(res);
-//   });
-// },
 };
 
-// Export the database functions for the controller (catsController.js).
+// Export the database functions for the controller
 module.exports = burger;
