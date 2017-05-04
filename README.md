@@ -2,25 +2,18 @@
 
 In this assignment, I created a burger logger with MySQL, Node, Express, Handlebars and a custom ORM.
 
-<!-- ### Requirments
-
-1. Survey should have 10 questions of your choosing. Each answer should be on a scale of 1 to 5 based on how much the user agrees or disagrees with a question.
-
-
-- - - -->
+## Live Link (Heroku)
+- https://mr-burgers.herokuapp.com/
 
 ## Concepts Implemented
 
-- Working with npm packages: express, body-parser, MySQL
-- Creating objects from a user's input
-- Comparing user data to stored data
-- API: GET and POST methods
-- Handlebars
 - MVC
-- Data routing
+- Handlebars
+- DATABASE: GET, POST, PUT methods
+- Working with npm packages: express, body-parser, MySQL
 
 
 ## Code Explanation
 
-- User enters name, link to a photo and completes a compatibility quiz
-- When the user submits their information the most compatible match from our database is sent back
+- A user enters the type of burger that they would like and using the POST method the DATABASE is updated with new information which in turn updates out HANDLEBARS index.
+- When the user clicks on the 'Eat Burger' button the DATABASE is updated with a BOOLEAN of the burgers status. When the burger is eaten it is then place in the eaten table of the HANDLEBARS index page. 
