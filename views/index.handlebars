@@ -4,10 +4,14 @@
     </div>
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
-            <form>
+            <form method='POST' action='/'>
                 <div class="form-group">
                     <div class="input-group col-xs-12 col-xs-offset-0">
-                        <input class="form-control" type="text" placeholder="What kind of burger would you like?"><span class="btn input-group-addon">Submit</span></div>
+                        <input class="form-control" type="text" placeholder="What kind of burger would you like?" name="burgerInput">
+                        <span class="input-group-addon">
+                          <button type="submit">Submit</button>
+                        </span>
+                    </div>
                 </div>
             </form>
         </div>

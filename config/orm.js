@@ -14,10 +14,23 @@ var orm = {
       callBack(result);
     });
   }
-  // ,
-  //
-  // insertOne: function() {
-  // }
+  ,
+
+  insertOne: function(tableInput, value, callBack) {
+
+    var queryString = "INSERT INTO " + tableInput;
+
+    queryString += ' (burger_name, devoured) VALUES ("';
+    queryString += value;
+    queryString += '", false); ';
+
+    connection.query(queryString, function(err, result) {
+      if (err) {
+        throw err;
+      }
+      callBack(result);
+    });
+  }
   // ,
   //
   // updateOne: function() {

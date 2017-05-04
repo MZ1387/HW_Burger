@@ -9,11 +9,19 @@ var burger = {
         callBack(res);
       });
     }
-    // ,
-    //
-    // insertOne: function() {
-    //   orm.insertOne();
-    // }
+    ,
+
+    insertOne: function(value, callBack) {
+      orm.insertOne("burgers", value, function(res) {
+        callBack(res);
+      });
+    }
+
+//     create: function(cols, vals, cb) {
+//   orm.create("cats", cols, vals, function(res) {
+//     cb(res);
+//   });
+// },
     // ,
     //
     // updateOne: function() {
